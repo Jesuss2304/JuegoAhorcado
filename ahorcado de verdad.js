@@ -3,7 +3,7 @@ const palabras = ['abrir', 'dudar', 'pedir', 'agarrar', 'durar', 'pensar', 'ahor
 'amar', 'entender', 'poder', 'apagar', 'escribir', 'preferir', 'aprender', 'escuchar', 'preguntar', 'bajar', 'esperar',	'prender', 'barrer', 'estar', 'prometer', 
 'beber', 'estudiar', 'querer', 'buscar', 'existir', 'recomendar', 'cambiar', 'ganar', 'recordar', 'caminar', 'gobernar', 'regalar', 'cantar', 'guardar',	
 'reir', 'cenar', 'gustar', 'resolver', 'cerrar', 'haber', 'responder', 'cocinar', 'hablar',	'saber', 'omenzar', 'hacer', 'saludar', 'comer', 'indicar',	'sentir',
-'comparar', 'invitar' 'ser', 'compartir', 'ir', 'soler', 'comprar', 'jugar', 'subir', 'conducir', 'lavar', 'suceder', 'conocer', 'leer', 'tener', 'contar',	
+'comparar', 'invitar', 'compartir', 'ir', 'soler', 'comprar', 'jugar', 'subir', 'conducir', 'lavar', 'suceder', 'conocer', 'leer', 'tener', 'contar',	
 'limpiar', 'terminar',  'conversar', 'llamar', 'trabajar',  'copiar', 'llevar', 'traer', 'creer', 'llover', 'usar', 'dar', 'mirar', 
 'utilizar', 'decir', 'necesitar', 'venir',  'desayunar', 'oir',	'ver', 'despertarse', 'olvidar', 'viajar', 'dirigir', 'pagar', 'visitar', 'dormir',	'parar','vivir']
     
@@ -15,14 +15,14 @@ document.querySelector('#output').innerHTML = palabraConGuiones;
 
 document.querySelector("#calcular").addEventListener("click", () =>{
   
-    const letra = document.querySelector('#letra').value;
-    let hafallado = true;
+    const letra = document.querySelector("#letra").value;
+    let haFallado = true;
     for(const i in palabra){
         if(letra == palabra[i]){
-            palabraConGuiones = palabraConGuiones.replaceAt(i*2,
-                letra);
-                hafallado = false;
-        }
+            palabraConGuiones = palabraConGuiones.replaceAt(i*2, letra);
+            haFallado = false;
+        }
+    }
     }
     if(hafallado){
         contadorFallos++;
